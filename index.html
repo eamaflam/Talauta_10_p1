@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard de Desempeño · Simulacro Saber 11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-logo">S11</div>
+      <div>
+        <div class="brand-title">Desempeño Saber 11</div>
+        <div class="brand-sub" id="quizName">—</div>
+      </div>
+    </div>
+
+    <button class="nav-btn active" id="btnGrupo" data-view="grupo">
+      <span class="ico">📊</span> Reporte del grupo
+    </button>
+
+    <div class="search-wrap">
+      <input type="search" id="search" placeholder="Buscar estudiante…" />
+    </div>
+    <div class="list-head">
+      <span>Estudiantes</span>
+      <select id="sortSel" title="Ordenar">
+        <option value="name">A–Z</option>
+        <option value="score">Puntaje</option>
+      </select>
+    </div>
+    <ul class="student-list" id="studentList"></ul>
+
+    <label class="upload">
+      <input type="file" id="fileInput" accept=".csv" hidden />
+      ⬆ Cargar otro CSV
+    </label>
+  </aside>
+
+  <main class="content" id="content"></main>
+
+  <script src="js/items.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
